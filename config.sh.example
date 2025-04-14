@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Define Files for Analysis
+UEFISETTINGS_BASE_PATH="$HOME/Downloads/ASROCK/uefisettings"
+
+UEFISETTINGS_LIST_STRINGS_FILENAME="list-strings.json"
+UEFISETTINGS_LIST_QUESTIONS_FILENAME="list-questions.json"
+UEFISETTINGS_IFR_FILENAME="show-ifr.txt"
+
+# Define uefitools Executable
+UEFISETTINGS_EXECUTABLE="/root/.cargo/bin/uefisettings"
