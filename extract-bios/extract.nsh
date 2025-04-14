@@ -1,4 +1,4 @@
-setup_var.efi AmdPcieDeviceCount(0x15):0x0 >> current.txt
+setup_var.efi AmdPcieDeviceCount(0x15):0x0 > current.txt
 setup_var.efi AmdSetup(0x5000):0x100 >> current.txt
 setup_var.efi AmdSetup(0x5000):0x101 >> current.txt
 setup_var.efi AmdSetup(0x5000):0x102 >> current.txt
