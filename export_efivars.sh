@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Requires efivar to be installed
-# apt-get install efivar
-
 # Create Folder for decoded efivars
 mkdir -p efivars-decoded/
+
+# Create Folder for dmpstore efivars
+mkdir -p efivars-dmpstore/
 
 # List all files in /sys/firmware/efi/efivars/
 for file in /sys/firmware/efi/efivars/*
@@ -36,7 +36,16 @@ do
 
     # Decode & Save in Readable Format
     efivar --name="${guid}-${category}" --print > "efivars-decoded/${name}.decoded.txt"
+
+    # Save in dmpstore Format
+    efivar --name="${guid}-${category}" --dmpstore --export="efivars-dmpstore/${name}.dmpstore"
 done
 
 # Remove any possible MokListRT since we don't want SecureBoot Configuration to be saved
-rm -f efivars-decoded/MokListRT*
+rm -f efivars-*/MokListRT*
+
+# Remove any possible MokListTrustedRT since we don't want SecureBoot Configuration to be saved
+rm -f efivars-*/MokListTrustedRT*
+
+# Remove any possible MokListXRT since we don't want SecureBoot Configuration to be saved
+rm -f efivars-*/MokListXRT*
