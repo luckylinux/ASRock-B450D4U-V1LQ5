@@ -1,4 +1,4 @@
-setup_var.efi AMD_PBS_SETUP(0x1):0x0 >> current.txt
+setup_var.efi AMD_PBS_SETUP(0x1):0x0 > current.txt
 setup_var.efi AMD_PBS_SETUP(0x1):0x10 >> current.txt
 setup_var.efi AMD_PBS_SETUP(0x1):0x12 >> current.txt
 setup_var.efi AMD_PBS_SETUP(0x1):0x15 >> current.txt
