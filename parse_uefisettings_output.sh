@@ -61,7 +61,7 @@ do
 
             # Echo (multi-Line & Tab)
             # echo -e "[${index}/${NUM_ELEMENTS}] ${result_name}"
-            # echo -e "${result_name}"
+            echo -e "${result_name}"
             echo -e "\tSelector: ${result_selector}"
             echo -e "\tValue: ${result_value}"
 
